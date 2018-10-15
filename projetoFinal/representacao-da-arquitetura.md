@@ -2,7 +2,7 @@
 
 ## Modelo de Arquitetura
 
-O modelo de arquitetura adotado foi XXX \(MVC, MVP, MVVM, ...\)
+O modelo de arquitetura adotado foi MVP
 
 Explicar a lógica entre as camadas
 
