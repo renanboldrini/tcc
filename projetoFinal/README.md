@@ -8,11 +8,11 @@ Esse documento tem como objetivo apresentar e descrever o projeto final, fornece
 
 ## [Representação da Arquitetura](representacao-da-arquitetura.md) 
 
-## [Desenvolvimento da Solução](desenvolvimento-da-solucao.md)
+## [JSON schema (indisponivel)]
 
-## [Testes e Validação](testes.md)
+## [Diagrama ER (indisponivel)](testes.md)
 
-## [POSTMORTEM](postmortem.md)
+## [Benchmarking - tabela comparativa (indisponivel)](postmortem.md)
 
 
 
