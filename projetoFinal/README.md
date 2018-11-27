@@ -1,6 +1,6 @@
 # Documentação e Artefatos
 
-Esse documento tem como objetivo apresentar e descrever o projeto Coin - Controlador de Finanças Pessoais, fornecendo informações e artefatos sobre a concepção do produto, o seu planejamento, as decisões arquiteturais, desenvolvimento, testes/validação e conclusões.
+Esse documento tem como objetivo apresentar e descrever o projeto "Coin - Controlador de Finanças Pessoais", fornecendo informações e artefatos sobre a concepção do produto, o seu planejamento, as decisões arquiteturais, desenvolvimento, testes/validação e conclusões.
 
 Apresentação geral do projeto:   
 https://medium.com/@renanboldrini408/coin-controlador-de-finan%C3%A7as-pessoais-f54b57c4405b
