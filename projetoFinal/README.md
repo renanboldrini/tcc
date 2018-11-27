@@ -8,8 +8,6 @@ Esse documento tem como objetivo apresentar e descrever o projeto final, fornece
 
 ## [Representação da Arquitetura](representacao-da-arquitetura.md) 
 
-## [JSON schema (indisponivel)](testes.md)
-
 ## [Diagrama ER (indisponivel)](testes.md)
 
 ## [Benchmarking - tabela comparativa (indisponivel)](testes.md)
