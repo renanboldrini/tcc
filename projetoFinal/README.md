@@ -17,7 +17,7 @@ ARTEFATOS DO PROJETO:
 
 ## [Diagrama ER](testes.md)
 
-## [Benchmarking - tabela comparativa (indisponivel)](testes.md)
+## [Benchmarking - tabela comparativa](testes.md)
 
 
 
