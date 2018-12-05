@@ -3,7 +3,7 @@
 ## Personas
 Link para download das personas e jornadas cadastradas:
 
-https://drive.google.com/open?id=1EKS0cqaXtAlFyfQunN2dTX4_xtk5cPF1
+https://drive.google.com/open?id=19NkDOuc_DfVgUjpERWHHBUcVIBfsW3tX
 
 ## Roadmap
 Link com o planejamento das sprints e demais informações:
