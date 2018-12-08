@@ -16,7 +16,7 @@ ARTEFATOS DO PROJETO:
 
 ## [Representação da Arquitetura](representacao-da-arquitetura.md) 
 
-## [Diagrama ER](diagramaER.md)
+## [Diagrama ER](DiagramaER.md)
 
 ## [Benchmarking - tabela comparativa](testes.md)
 
