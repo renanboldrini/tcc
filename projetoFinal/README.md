@@ -5,7 +5,7 @@ Esse documento tem como objetivo apresentar e descrever o projeto "Coin - Contro
 Apresentação geral do projeto:   
 https://medium.com/@renanboldrini408/coin-controlador-de-finan%C3%A7as-pessoais-f54b57c4405b
 
-Manual de interaçoes da aplicação :
+Manual de interaçoes da aplicação:         
 https://drive.google.com/open?id=1wRCFAnFSgPjuF06XLs8ssGER33rbH4gZ
 
 
