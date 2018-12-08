@@ -19,5 +19,6 @@ ARTEFATOS DO PROJETO:
 
 ## [Benchmarking - tabela comparativa](testes.md)
 
+## [Benchmarking - Manual de interaçoes da aplicação](testes.md)
 
 
