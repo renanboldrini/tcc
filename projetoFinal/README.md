@@ -6,8 +6,7 @@ API Rest encontra-se disponível para consumo na URL: 
 https://tcc-adonis.herokuapp.com/{{PATH}}
 
 Link para acessar a aplicação:
-https://coin-controlador-financeiro.herokuapp.com/index.html
-
+https://coin-controlador-financeiro.herokuapp.com/index.html     
 Login: teste@teste.com.br
 Senha: 123456
 
