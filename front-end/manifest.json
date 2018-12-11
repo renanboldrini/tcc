@@ -1,0 +1,38 @@
+
+{
+"name": "COIN",
+"short_name": "COIN",
+"description": "COIN - Controlador de finanças",
+"start_url": "/index.html",
+"scope": ".",
+"background_color": "#339cd5",
+"theme_color": "#339cd5",
+"display": "standalone",
+"orientation": "portrait-primary",
+"dir": "ltr",
+"lang": "pt-br",
+"icons": [
+  {
+    "src": "https://drive.google.com/uc?id=1Dz6zEg0OMANOnoLQujbuzCp-jkG_MCwU",
+    "type": "image/png",
+    "sizes": "72x72"
+  },
+  {
+    "src": "https://drive.google.com/uc?id=1_4BBk0OufcEnXwJjAPEsNY5GV09P3h5U",
+    "type": "image/png",
+    "sizes": "512x512"
+  },
+  {
+    "src": "https://drive.google.com/uc?id=1Dz6zEg0OMANOnoLQujbuzCp-jkG_MCwU",
+    "type": "image/png",
+    "sizes": "144x144"
+  },
+  {
+    "src": "https://drive.google.com/uc?id=1Dz6zEg0OMANOnoLQujbuzCp-jkG_MCwU",
+    "type": "image/png",
+    "sizes": "192x192"
+  }
+ ]
+}
+
+

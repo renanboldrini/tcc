@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="text/javascript">
+		if(location.protocol!=='https:'){
+	const httpsURL = 'https://'+location.href.split('//')[1]
+	location.replace(httpsURL)
+}
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130601767-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-130601767-1');
+	</script>
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-130601767-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+	<script type="text/javascript">
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker
+			.register('/sw.js')
+			.then(function() {
+				console.log("Service Worker registered successfully");
+			})
+			.catch(function() {
+				console.log("Service worker registration failed")
+			});
+		}
+	</script>
+	<meta name="theme-color" content="#339cd5">
+	<link rel="shortcut icon" href="#" />
+	<link rel="manifest" href="/manifest.json">
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	<title>COIN</title>
+	<link href="css/tcc.css" rel="stylesheet"/>
+	<link href="css/filtro.css" rel="stylesheet"/>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+</head>
+<body>
+
+	<header>
+		<nav class="cor-menu  navbar navbar-expand-lg navbar-dark central-menu">
+			<p class="menuT navbar-brand"> <img class="logoO" src="https://drive.google.com/uc?id=1QfSCCYacCEPprEysWfWWsLgc487qCsKw"> O I N</p>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			</div>
+		</nav>
+	</header>
+
+
+	<!-- HOME -->	
+	<div id="pgLogin" class="login" style="display:block">
+		<img class="loginImg" src="https://drive.google.com/uc?id=1QfSCCYacCEPprEysWfWWsLgc487qCsKw">
+		<p  class="loginTxt">Login</p><input id="llogin" class="loginInp" type="" name="">
+		<p class="loginTxt">Senha</p><input id="Slogin" class="loginInp" type="" name="">
+		<div id="loginB" class="btnLogin" onclick="logando()">LOGIN</div>
+	</div>
+
+	<div id="home"  class="container-fluid" style="display:none">
+		<div class="row">
+			<div id="esquerda" class="col-12 col-lg-6">
+				<div class="saldo-fundo">
+					<div id="saldo-mobile">
+						<h1 id="saldoC" onclick="modalSaldo()"  class="saldo d-block d-lg-none" >R$ ----,--</h1>
+						<div id="indicadorContas" class="stars d-block d-lg-none">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+						</div>
+						<div class="gastos-diarios d-flex d-lg-none">
+							<p class="diario">Limite diário sugerido</p><p id="limiteC" class="valor-diario">R$ ---,--</p>
+						</div>		
+						<div class="gastos-diarios d-flex d-lg-none">
+							<p class="diario">Gastos diários</p><p id="gastos" class="valor-diario">R$ ---,--</p>
+						</div>
+						<div class="ladoLado">
+							<div id="botaoLmobi" class="botao d-block d-lg-none" onclick="modalLimite(); analytics(1)" >LIMITE</div>
+							<div id="botaoPmobi" class="botao d-block d-lg-none" onclick="botaoPrincipal(); limpaFormulario()" >REGISTRAR</div>
+						</div>
+
+					</div>
+
+					<h1 id="saldoCD" onclick="modalSaldo()" class="saldo d-none d-lg-block" >R$ ----,--</h1>
+					<div class="fundo-claro d-none d-lg-block">
+
+						<div class="contornolimite">
+							<div class="gastos-diarios">
+								<p class="diario">Limite diário sugerido</p><p id="limiteCD" class="valor-diario">R$ ---,--</p>
+							</div>		
+							<div class="gastos-diarios">
+								<p class="diario">Gastos diários</p><p id="gastosD" class="valor-diario">R$ ---,--</p>
+							</div>				
+							<div class="logo">
+								<img class="coin" src="https://drive.google.com/uc?id=1VRDgdhs2d_M78GQddQN7nuJYTtsigUDl">
+							</div>
+						</div>
+
+						<div id="indicadorContasD" class="stars d-none d-lg-block">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+							<img class="star" src="https://drive.google.com/uc?id=1132i5q1UmMs3OumrOklgOhwUBpZyXMeD">
+						</div>
+
+						<div id="botaoLdesk" class="botao d-none d-lg-block" onclick="modalLimite()" >LIMITE</div>
+
+						<div id="botaoPdesk" class="botao d-none d-lg-block" onclick="botaoPrincipal(); limpaFormulario()" >REGISTRAR</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!--modal-->
+			<div class="modal fade" id="limiteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Edite seu limite:</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="centro-modal">
+								<p>Digite o valor desejado para seu limite mensal, baseado nele podemos sugerir gastos diários e indicar através das estrelas, a sua situação financeira: <br><br>
+									<input type="text" id="limite" name="limite" class=" dinheiro" style="display:inline-block" placeholder="0,00" />
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="atualizaLimite()">Salvar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--modal fim-->
+
+				<!--modal Saldo-->
+				<div class="modal fade" id="saldoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">SALDO:</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="centro-modal">
+									<p>Atualize o valor do seu saldo atual: <br><br>
+										<input type="text" id="saldoR" name="saldo" class=" dinheiro" style="display:inline-block" placeholder="0,00" />
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="atualizaSaldo()">Salvar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--modal fim-->
+
+
+
+					<div class="col-12 col-lg-6">
+						<div class="lista-fundo">
+							<!-- TABELA -->	
+
+							<div id="tabela" style="display: block;">
+								<!-- FILTRO -->	
+								<div id="categoriza" class="categorizando minimizado">
+									<div id="alteraConta" class="botaoConta" onclick="construcaoTabela(contas)" style="display: block;">
+										CONTAS
+									</div>
+									<div id="botaoFiltro" class="botaoFiltro" onclick="maxMin()" style="display: block;">
+										<img class="img-filtro-p" src="https://drive.google.com/uc?id=1c57JxTS13liTKxbH0kPDaJxoKe8Zw8x8">
+									</div>
+
+									<div id="imagemsub" class="botaoFiltro cifrao" style="display: none;">
+										<img class="img-filtro-p" src="https://drive.google.com/uc?id=1WkcSU6J1O2de-k2nhTFymxVYibpbQfDq">
+									</div>
+
+
+									<div id="alteraEmprestimo" class="botaoEmprestimo" onclick="construcaoTabelaEmprestimo(emprestimos)" style="display: block;">
+										EMPRESTIMOS
+									</div>
+
+
+									<div id="sel-cat" class="seleciona-categoria" style="display: none;">
+										<div class="cabecalho-filtro">
+											<p>Filtro: </p> 
+											<div id="botaoMtudo" class="botao-m-tudo" onclick="maxMin(); construcaoTabela(contas)" >MOSTRAR TUDO</div> 
+										</div>
+										<div class="buttons-filtro">
+											<div id="vestuariosS" class="buton-filtro" onclick="categoriafun('vestuarios');categorizar('vestuarios');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1MAl9oVxyRPCboodAxmeIj5cKBgD1fdXx">
+												<p class="descricao-filtro">Vestuario</p>
+											</div>
+											<div id="educacaoO" class="buton-filtro" onclick="categoriafun('educacao');categorizar('educacao');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1grKICGVR0qXPnmqUdCQA-oSA_EV3z-sT">
+												<p class="descricao-filtro">Educacao</p>
+											</div>
+											<div id="restauranteE" class="buton-filtro" onclick="categoriafun('restaurante');categorizar('restaurante');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1fNB37ENKv8xPZl7sSvLh0aJd5VqF_16B">
+												<p class="descricao-filtro">Restaurante</p>
+											</div>
+											<div id="lazerR" class="buton-filtro" onclick="categoriafun('lazer');categorizar('lazer');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=17oiHaKKlQ973X4jAnyUeeRb3Z44wcIGn">
+												<p class="descricao-filtro">Lazer</p>
+											</div>
+											<div id="supermercadoO" class="buton-filtro" onclick="categoriafun('supermercado');categorizar('supermercado');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1HSa_dpfZTcnqW2NGJh9aLyLbPAL7w04t">
+												<p class="descricao-filtro">Supermercado</p>
+											</div>
+											<div id="casaA" class="buton-filtro" onclick="categoriafun('casa');categorizar('casa');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1EFfEDrQWlz7xBDKnlZTt4dKbsvf_4Bst">
+												<p class="descricao-filtro">Casa</p>
+											</div>
+										</div>
+										<div class="buttons-filtro">
+											<div id="saudeE" class="buton-filtro" onclick="categoriafun('saude');categorizar('saude');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1Zq_7Z3duGw9_O34Zj1MptFg_fAxF9FgI">
+												<p class="descricao-filtro">Saude</p>
+											</div>
+											<div id="servicosS" class="buton-filtro" onclick="categoriafun('servicos');categorizar('servicos');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=14VgVOf3CAFOLNYIWD5lNAvjjhvqru9jT">
+												<p class="descricao-filtro">Serviços</p>
+											</div>
+											<div id="viagemM" class="buton-filtro" onclick="categoriafun('viagem');categorizar('viagem');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=13KS3U2rDv8Cy9VQIjYqtzc74kket_qg4">
+												<p class="descricao-filtro">Viagem</p>
+											</div>
+											<div id="eletronicosS" class="buton-filtro" onclick="categoriafun('eletronicos');categorizar('eletronicos');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1PSwYxiozPDupRiUFdP_nMnq7Kx-bCWWV">
+												<p class="descricao-filtro">Eletronicos</p>
+											</div>
+											<div id="transporteE" class="buton-filtro" onclick="categoriafun('transporte');categorizar('transporte');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1bphyx5l9AYPkOABRntrVuOT9wf5YZB-c">
+												<p class="descricao-filtro">Transporte</p>
+											</div>
+											<div id="outrosS" class="buton-filtro" onclick="categoriafun('outros');categorizar('outros');maxMin()">
+												<img class="img-filtro" src="https://drive.google.com/uc?id=1_ougw_i7KfRG-ef8OQYwcoqjKskvOPsg">
+												<p class="descricao-filtro">Outros</p>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+								<!-- FILTRO FIM-->	
+								<!-- Tabela-->	
+								<div id="Tab" class="tabelaScrol Tminimizado">
+								</div>
+								<!-- Tabela-->	
+							</div>	
+							<!-- FINAL TABELA -->
+
+							<!-- Formulário -->	
+							<div id="formulario" style="display: none;">
+
+								<p class="titulo-cadastro"> <span id="previa-conteudo"> Qual o valor da </span><b id="palavra-chave" class="conta b-conta" value="TESTE" >conta</b>?</p>
+
+								<div class="valor-d">
+									<label class="descricao" for="dinheiro">R$</label><input type="text" id="dinheiro" name="dinheiro" class=" dinheiro conta" style="display:inline-block" placeholder="0,00" />
+								</div>
+
+								<div id="categorias" style="display: block;">
+									<p class="titulo-categoria">Categoria: </p>
+									<div class="buttons-categoria">
+										<div id="vestuarios" class="buton-categoria" onclick="categoriafun('vestuarios')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1eYh6Zyi42_hye9UMKv0-Jdfyxa8cfBrA">
+											<p class="descricao-categoria">Vestuario</p>
+										</div>
+										<div id="educacao" class="buton-categoria" onclick="categoriafun('educacao')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1tw0zCU-p3zF5ez53ccNAtaM_Xu2_2kFW">
+											<p class="descricao-categoria">Educacao</p>
+										</div>
+										<div id="restaurante" class="buton-categoria" onclick="categoriafun('restaurante')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1XCbWtDOTsNbcNH-b0NOkObNxgF0prAH9">
+											<p class="descricao-categoria">Restaurante</p>
+										</div>
+										<div id="lazer" class="buton-categoria" onclick="categoriafun('lazer')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1z7dZ5oAU2nVEicOR_I4iTaMLoiTMW2tj">
+											<p class="descricao-categoria">Lazer</p>
+										</div>
+										<div id="supermercado" class="buton-categoria" onclick="categoriafun('supermercado')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1cf5rFrko0SHMxWt9qFhRytZ6dnacSB37">
+											<p class="descricao-categoria">Supermercado</p>
+										</div>
+										<div id="casa" class="buton-categoria" onclick="categoriafun('casa')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1yP36cBk4GvPugXPLJlarJgNirW_axs9t">
+											<p class="descricao-categoria">Casa</p>
+										</div>
+									</div>
+									<div class="buttons-categoria">
+										<div id="saude" class="buton-categoria" onclick="categoriafun('saude')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1NA9ESGVtCoVf2FKY3a8edOYYPcco56AG">
+											<p class="descricao-categoria">Saude</p>
+										</div>
+										<div id="servicos" class="buton-categoria" onclick="categoriafun('servicos')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1bF-mM4WG_eYUViBpSiSIUjQjfn2Lcyo8">
+											<p class="descricao-categoria">Serviços</p>
+										</div>
+										<div id="viagem" class="buton-categoria" onclick="categoriafun('viagem')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1WKjl0jb_DHIMKPhnB_TdQi-bIBXuGEbV">
+											<p class="descricao-categoria">Viagem</p>
+										</div>
+										<div id="eletronicos" class="buton-categoria" onclick="categoriafun('eletronicos')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1B-kntHuNoA_VJ--2qzE2fbwpkVKL4MJR">
+											<p class="descricao-categoria">Eletronicos</p>
+										</div>
+										<div id="transporte" class="buton-categoria" onclick="categoriafun('transporte')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=120b-h3N0QsEolyH-tQSIoG86PbH61bty">
+											<p class="descricao-categoria">Transporte</p>
+										</div>
+										<div id="outros" class="buton-categoria" onclick="categoriafun('outros')">
+											<img class="img-categoria" src="https://drive.google.com/uc?id=1vMNbKew1YQDUwNF5o9_krKm0a-5hu7Nl">
+											<p class="descricao-categoria">Outros</p>
+										</div>
+									</div>
+								</div>
+
+
+								<div id="identidade-emprestimo" style="display: none;">
+									<p class="titulo-categoria">Para quem você emprestou? </p>
+									<div id="identidade">
+										<img class="img-emprestimo" src="https://drive.google.com/uc?id=1TfGi-rXRQ0S3W6ao6covrVYgu5Pjsr8r">
+									</div>
+									<div class="nome-div">
+										<input id="nome" class="emprestimo" placeholder="Nome">
+									</div>
+								</div>
+
+
+								<p class="titulo-categoria">O valor já foi quitado?</p>
+								<div class="buttons-confirmacao">
+									<div id="sim" class="buton-categoria" value="false" onclick="botaoSim()">
+										<img class="img-categoria" src="https://drive.google.com/uc?id=1NeJmtiilOk2p2wMK3OwTciDZqMjOFmI9">
+										<p class="descricao-categoria">Sim</p>
+									</div>
+									<div id="nao" class="buton-categoria" value="false" onclick="botaoNao()" >
+										<img class="img-categoria" src="https://drive.google.com/uc?id=1cPV7cGM8KMZ6u-Lu3HM6GkBdoZqur2W5">
+										<p class="descricao-categoria">Não</p>
+									</div>
+									<div id="campo-data" style="display: none;" class="data-div">
+										<p class="descricao-categoria">Será pago em:</p>
+										<input id="outra_data" class="conta" placeholder="dd/mm/aaaa">
+									</div>
+								</div>
+
+								<div id="botao-de-registro" class="botao-registro conta-botao conta" onclick="registro()">REGISTRAR</div>
+
+								<div id="muda-opcao" class=""> 
+									<p id="alterador" onclick="alteraQuadroRegistro()" class="alternativa emprestimo-link"> Registrar um emprestimo </p>
+								</div>
+
+								<div id="muda-opcao" class="d-block d-lg-none"> 
+									<p id="voltar-mobile" onclick="botaoPrincipal(); limpaFormulario()" class="alternativa emprestimo-link"> Voltar </p>
+								</div>
+
+
+								<!--modal-->
+								<div class="modal fade" id="contaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Perfeito!</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<div class="centro-modal">
+													<p>Se preferir, adicione uma descrição para conta.<br>
+													Assim fica mais facil de lembrar quais foram os seus gasto.</p>
+													Descrição da conta (opcional):
+													<input id="descricao-conta" type="" name="" placeholder="Ex: Posto Zona Sul">
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="salvaConta()">Salvar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--modal fim-->
+
+
+
+							</div>	
+							<!-- Final Formulário -->	
+
+						</div>    
+					</div>
+				</div>
+			</div>
+
+			<footer class="d-none d-lg-block">
+				Renan Ramos © 2018
+			</footer>
+
+			<!-- Final HOME -->	
+
+
+
+			<!-- jQuery -->
+			<script src='js/jquery-3.3.1.js'></script>
+			<script src='js/jquery-ui.js'></script>
+			<script src="https://momentjs.com/downloads/moment.min.js"></script>
+			<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script> 
+
+
+			<!-- JS -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+			<script src="bootstrap/js/bootstrap.min.js" ></script>
+			<script src="js/lista.js"></script>	
+			<script src="js/formulario.js"></script>
+
+		</body>
+		</html>
